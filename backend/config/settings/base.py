@@ -1,6 +1,7 @@
 from pathlib import Path
 
 import environ
+from django.utils.translation import gettext_lazy as _
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -35,6 +36,7 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -87,14 +89,23 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-LANGUAGE_CODE = 'en-us'
+LOCALE_PATHS = [str(BASE_DIR / "locale")]
 
-TIME_ZONE = 'UTC'
+LANGUAGE_CODE = 'ru'
+
+LANGUAGES = [
+    ('en', _('English')),
+    ('ru', _('Russian')), 
+]
+
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
 USE_TZ = True
 
+
+STATIC_ROOT = str(BASE_DIR / 'staticfiles')
 
 STATIC_URL = 'static/'
 

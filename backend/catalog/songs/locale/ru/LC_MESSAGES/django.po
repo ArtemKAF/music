@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-22 11:21+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: catalog/songs/apps.py:8 catalog/songs/models.py:38
+msgid "Songs"
+msgstr "Песни"
+
+#: catalog/songs/models.py:12
+msgid "Name"
+msgstr "Название"
+
+#: catalog/songs/models.py:30 catalog/songs/models.py:45
+msgid "Singer"
+msgstr "Исполнитель"
+
+#: catalog/songs/models.py:31
+msgid "Singers"
+msgstr "Исполнители"
+
+#: catalog/songs/models.py:37 catalog/songs/models.py:75
+msgid "Song"
+msgstr "Песня"
+
+#: catalog/songs/models.py:49
+msgid "Year"
+msgstr "Год"
+
+#: catalog/songs/models.py:60 catalog/songs/models.py:69
+msgid "Album"
+msgstr "Альбом"
+
+#: catalog/songs/models.py:61
+msgid "Albums"
+msgstr "Альбомы"
+
+#: catalog/songs/models.py:79
+msgid "Position"
+msgstr "Позиция"
+
+#: catalog/songs/models.py:87
+msgid "Song in album"
+msgstr "Песня в альбоме"
+
+#: catalog/songs/models.py:88
+msgid "Songs in albums"
+msgstr "Песни в альбомах"
+
+#: catalog/songs/utils.py:5
+#, python-format
+msgid "Required. %(max_chars)s characters or fewer."
+msgstr "Обязательное поле. Не более %(max_chars)s символов."
+
+#: catalog/songs/utils.py:8
+#, python-format
+msgid "Value can not be less than %(min_value)s."
+msgstr "Значение не может быть меньше, чем %(min_value)s."
+
+#: catalog/songs/utils.py:11
+#, python-format
+msgid "Value can not be more than %(max_value)s."
+msgstr "Значение не может быть больше, чем %(max_value)s."
