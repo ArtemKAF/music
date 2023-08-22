@@ -1,25 +1,23 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Copyright (C)
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# Козин Артем <kaf-artem@yandex.ru>, 2023.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Music catalog 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-22 11:21+0300\n"
+"POT-Creation-Date: 2023-08-22 12:11+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Козин Артем <kaf-artem@yandex.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-#: catalog/songs/apps.py:8 catalog/songs/models.py:38
+
+#: catalog/songs/apps.py:8 catalog/songs/models.py:41
 msgid "Songs"
 msgstr "Песни"
 
@@ -27,41 +25,45 @@ msgstr "Песни"
 msgid "Name"
 msgstr "Название"
 
-#: catalog/songs/models.py:30 catalog/songs/models.py:45
+#: catalog/songs/models.py:33 catalog/songs/models.py:48
 msgid "Singer"
 msgstr "Исполнитель"
 
-#: catalog/songs/models.py:31
+#: catalog/songs/models.py:34
 msgid "Singers"
 msgstr "Исполнители"
 
-#: catalog/songs/models.py:37 catalog/songs/models.py:75
+#: catalog/songs/models.py:40 catalog/songs/models.py:78
 msgid "Song"
 msgstr "Песня"
 
-#: catalog/songs/models.py:49
+#: catalog/songs/models.py:52
 msgid "Year"
 msgstr "Год"
 
-#: catalog/songs/models.py:60 catalog/songs/models.py:69
+#: catalog/songs/models.py:63 catalog/songs/models.py:72
 msgid "Album"
 msgstr "Альбом"
 
-#: catalog/songs/models.py:61
+#: catalog/songs/models.py:64
 msgid "Albums"
 msgstr "Альбомы"
 
-#: catalog/songs/models.py:79
+#: catalog/songs/models.py:82
 msgid "Position"
 msgstr "Позиция"
 
-#: catalog/songs/models.py:87
+#: catalog/songs/models.py:90
 msgid "Song in album"
 msgstr "Песня в альбоме"
 
-#: catalog/songs/models.py:88
+#: catalog/songs/models.py:91
 msgid "Songs in albums"
 msgstr "Песни в альбомах"
+
+#: catalog/songs/models.py:94
+msgid "in"
+msgstr "в"
 
 #: catalog/songs/utils.py:5
 #, python-format

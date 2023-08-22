@@ -23,6 +23,9 @@ class BaseModel(models.Model):
         abstract = True
         ordering = ('name', )
 
+    def __str__(self):
+        return self.name
+
 
 class Singer(BaseModel):
 
@@ -86,3 +89,6 @@ class AlbumSong(models.Model):
         ordering = ('id', )
         verbose_name = _('Song in album')
         verbose_name_plural = _('Songs in albums')
+
+    def __str__(self):
+        return f'{self.song} ' + _('in') + f' {self.album}'
