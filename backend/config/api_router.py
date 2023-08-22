@@ -1,7 +1,13 @@
 from django.urls import include, path
-from rest_framework.routers import SimpleRouter
+from rest_framework.routers import DefaultRouter
 
-router = SimpleRouter()
+from catalog.songs.api.views import (AlbumViewSet,  # isort:skip
+                                     SingerViewSet, SongViewSet)
+
+router = DefaultRouter()
+router.register('singers', SingerViewSet)
+router.register('songs', SongViewSet)
+router.register('album', AlbumViewSet)
 
 app_name = 'api'
 urlpatterns = [
