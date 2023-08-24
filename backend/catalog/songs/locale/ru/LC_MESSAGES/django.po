@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Music catalog 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-22 12:11+0300\n"
+"POT-Creation-Date: 2023-08-24 11:33+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Козин Артем <kaf-artem@yandex.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,17 +65,17 @@ msgstr "Песни в альбомах"
 msgid "in"
 msgstr "в"
 
-#: catalog/songs/utils.py:5
+#: catalog/songs/utils.py:6
 #, python-format
 msgid "Required. %(max_chars)s characters or fewer."
 msgstr "Обязательное поле. Не более %(max_chars)s символов."
 
-#: catalog/songs/utils.py:8
+#: catalog/songs/utils.py:11
 #, python-format
 msgid "Value can not be less than %(min_value)s."
 msgstr "Значение не может быть меньше, чем %(min_value)s."
 
-#: catalog/songs/utils.py:11
+#: catalog/songs/utils.py:16
 #, python-format
 msgid "Value can not be more than %(max_value)s."
 msgstr "Значение не может быть больше, чем %(max_value)s."
