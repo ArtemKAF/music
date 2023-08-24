@@ -7,7 +7,7 @@ from catalog.songs.api.views import (AlbumViewSet,  # isort:skip
 router = DefaultRouter()
 router.register('singers', SingerViewSet)
 router.register('songs', SongViewSet)
-router.register('album', AlbumViewSet)
+router.register('albums', AlbumViewSet)
 
 app_name = 'api'
 urlpatterns = [

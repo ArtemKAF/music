@@ -57,6 +57,7 @@ class Album(BaseModel):
     songs = models.ManyToManyField(
         Song,
         through='AlbumSong',
+        through_fields=('album', 'song', ),
     )
 
     class Meta:

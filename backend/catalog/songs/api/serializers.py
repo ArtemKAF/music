@@ -6,25 +6,39 @@ class SingerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Singer
-        fields = '__all__'
+        fields = ('name', )
 
 
 class SongSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Song
-        fields = '__all__'
-
-
-class AlbumSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Album
-        fields = '__all__'
+        fields = ('name', )
+        depth = 1
 
 
 class AlbumSongSerializer(serializers.ModelSerializer):
+    id = serializers.ReadOnlyField(
+        source='song.id',
+    )
+    name = serializers.ReadOnlyField(
+        source='song.name',
+    )
+
 
     class Meta:
         model = AlbumSong
-        fields = '__all__'
+        fields = ('id', 'position', 'name', )
+
+
+class AlbumSerializer(serializers.ModelSerializer):
+    singer = SingerSerializer()
+    songs = AlbumSongSerializer(
+        source='albumsong_set',
+        many=True,
+        read_only=True
+    )
+
+    class Meta:
+        model = Album
+        fields = ('name', 'year', 'singer', 'songs', )
