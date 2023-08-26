@@ -90,6 +90,13 @@ class AlbumSong(models.Model):
         ordering = ('id', )
         verbose_name = _('Song in album')
         verbose_name_plural = _('Songs in albums')
+        default_related_name = 'albumsongs'
+        constraints = (
+            models.UniqueConstraint(
+                fields=('album', 'song', ),
+                name='%(app_label)s_%(class)s_unique_album_song',
+            ),
+        )
 
     def __str__(self):
         return f'{self.song} ' + _('in') + f' {self.album}'
