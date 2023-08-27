@@ -87,7 +87,7 @@ class AlbumSong(models.Model):
     )
 
     class Meta:
-        ordering = ('id', )
+        ordering = ('position', )
         verbose_name = _('Song in album')
         verbose_name_plural = _('Songs in albums')
         default_related_name = 'albumsongs'
