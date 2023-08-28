@@ -1,5 +1,5 @@
 from .base import *  # noqa
 
-DEBUG = False
+DEBUG = env.bool('DEBUG', False)
 
-CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS', '')  # npqa
+CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS', default='')  # noqa
