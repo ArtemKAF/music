@@ -21,7 +21,46 @@
 - Django 4.2.2
 - DRF 3.14.0
 - Docker
+- nginx
 - SQLite3
+
+## Как запустить
+### Запуск проекта в dev-режиме
+- Клонируйте репозиторий
+```
+git clone https://github.com/ArtemKAF/music.git
+```
+- В директории проекта установите и активируйте виртуальное окружение
+```
+python3 -m venv venv
+source ./venv/bin/activate
+```
+- Установите зависимости из файла requirements.txt
+```
+pip install -r ./backend/requirements.txt
+```
+- В директории backend проведите миграции:
+```
+python manage.py migrate
+```
+- Cоздайте суперпользователя (опционально):
+```
+python manage.py createsuperuser
+```
+- Запустите Django-сервер командой:
+```
+python manage.py runserver --insecure
+```
+### Запуск в контейнерах Docker:
+- После клонирования репозитория, как в предыдущем примере, подготовьте   
+.env в директориях backend и infra по соответствующим шаблонам .env.example,  
+располагающимся в указанных директориях;
+- Из директории infra выполните следующую команду в терминале:
+```
+docker compose up -d
+```
+После того как Docker запустит контейнеры документация по API станет доступна  
+по адресу [http://127.0.0.1/swagger-ui](http://127.0.0.1/swagger-ui)
 ### License
 MIT
 ### Авторы
