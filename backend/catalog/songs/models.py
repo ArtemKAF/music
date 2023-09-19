@@ -1,14 +1,12 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from catalog.songs.constants import (MAX_LENGHT_NAME,  # isort: skip
-                                     MAX_SONG_IN_ALBUM_POSITION, MAX_YEAR,
-                                     MIN_SONG_IN_ALBUM_POSITION, MIN_YEAR
-                                     )
-from catalog.songs.fields import (  # isort: skip
-    ValidatePositiveSmallIntegerField
+from catalog.songs.constants import (
+    MAX_LENGHT_NAME, MAX_SONG_IN_ALBUM_POSITION, MAX_YEAR,
+    MIN_SONG_IN_ALBUM_POSITION, MIN_YEAR,
 )
-from catalog.songs.utils import get_help_text_required_max_chars  # isort: skip
+from catalog.songs.fields import ValidatePositiveSmallIntegerField
+from catalog.songs.utils import get_help_text_required_max_chars
 
 
 class BaseModel(models.Model):

@@ -1,8 +1,7 @@
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
-from catalog.songs.api.views import (AlbumViewSet,  # isort:skip
-                                     SingerViewSet, SongViewSet)
+from catalog.songs.api.views import AlbumViewSet, SingerViewSet, SongViewSet
 
 router = DefaultRouter()
 router.register('singers', SingerViewSet)

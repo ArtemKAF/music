@@ -161,3 +161,6 @@ cython_debug/
 
 # VSCode
 .vscode/
+
+# git
+.pre-commit-config.yaml

@@ -1,10 +1,9 @@
 from rest_framework import viewsets
 
-from catalog.songs.api.serializers import (AlbumSerializer,  # isort: skip
-                                           SingerSerializer,
-                                           SongSerializer
-                                           )
-from catalog.songs.models import Album, Singer, Song  # isort: skip
+from catalog.songs.api.serializers import (
+    AlbumSerializer, SingerSerializer, SongSerializer,
+)
+from catalog.songs.models import Album, Singer, Song
 
 
 class SingerViewSet(viewsets.ModelViewSet):

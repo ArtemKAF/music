@@ -1,7 +1,7 @@
 from django.utils.translation import gettext_lazy as _
 from rest_framework import serializers
 
-from catalog.songs.models import Album, AlbumSong, Singer, Song  # isort: skip
+from catalog.songs.models import Album, AlbumSong, Singer, Song
 
 
 class SingerSerializer(serializers.ModelSerializer):
