@@ -1,5 +1,5 @@
-from django.db import models  # type: ignore
-from django.utils.translation import gettext_lazy as _  # type: ignore
+from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 from catalog.songs.constants import (MAX_LENGHT_NAME,  # isort: skip
                                      MAX_SONG_IN_ALBUM_POSITION, MAX_YEAR,

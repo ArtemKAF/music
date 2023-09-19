@@ -1,5 +1,5 @@
-from django.utils.translation import gettext_lazy as _  # type: ignore
-from rest_framework import serializers  # type: ignore
+from django.utils.translation import gettext_lazy as _
+from rest_framework import serializers
 
 from catalog.songs.models import Album, AlbumSong, Singer, Song  # isort: skip
 

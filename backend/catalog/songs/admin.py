@@ -1,4 +1,4 @@
-from django.contrib import admin  # type: ignore
+from django.contrib import admin
 
 from catalog.songs.models import Album, AlbumSong, Singer, Song  # isort: skip
 

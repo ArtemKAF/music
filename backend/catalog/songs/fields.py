@@ -1,6 +1,5 @@
-from django.core.validators import (MaxValueValidator,  # type: ignore
-                                    MinValueValidator)
-from django.db import models  # type: ignore
+from django.core.validators import MaxValueValidator, MinValueValidator
+from django.db import models
 
 from catalog.songs.utils import (  # isort: skip
     get_error_message_max_validator,

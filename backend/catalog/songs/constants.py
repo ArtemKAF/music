@@ -1,4 +1,4 @@
-from django.utils.timezone import datetime  # type: ignore
+from django.utils.timezone import datetime
 
 MAX_LENGHT_NAME = 150
 MIN_SONG_IN_ALBUM_POSITION = 1

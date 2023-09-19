@@ -1,4 +1,4 @@
-from django.utils.translation import gettext_lazy as _  # type: ignore
+from django.utils.translation import gettext_lazy as _
 
 
 def get_help_text_required_max_chars(max_chars: int) -> str:

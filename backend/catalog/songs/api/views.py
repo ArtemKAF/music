@@ -1,4 +1,4 @@
-from rest_framework import viewsets  # type: ignore
+from rest_framework import viewsets
 
 from catalog.songs.api.serializers import (AlbumSerializer,  # isort: skip
                                            SingerSerializer,
