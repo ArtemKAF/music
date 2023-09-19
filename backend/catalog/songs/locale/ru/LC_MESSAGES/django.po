@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Music catalog 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-27 16:22+0300\n"
+"POT-Creation-Date: 2023-09-19 14:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Козин Артем <kaf-artem@yandex.ru>\n"
 "Language-Team: MyTeam\n"
@@ -18,62 +18,62 @@ msgstr ""
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: catalog/songs/api/serializers.py:92
-msgid "This singer alredy has an album with this name!"
+msgid "This singer already has an album with this name!"
 msgstr "У этого исполнителя уже есть альбом с таким названием!"
 
 #: catalog/songs/api/serializers.py:98
 msgid "There can not be songs with the same name in an album!"
 msgstr "В альбоме не может быть песен с одинаковыми названиями!"
 
-#: catalog/songs/apps.py:8 catalog/songs/models.py:41
+#: catalog/songs/apps.py:8 catalog/songs/models.py:45
 msgid "Songs"
 msgstr "Песни"
 
-#: catalog/songs/models.py:12
+#: catalog/songs/models.py:16
 msgid "Name"
 msgstr "Название"
 
-#: catalog/songs/models.py:33 catalog/songs/models.py:48
+#: catalog/songs/models.py:37 catalog/songs/models.py:52
 msgid "Singer"
 msgstr "Исполнитель"
 
-#: catalog/songs/models.py:34
+#: catalog/songs/models.py:38
 msgid "Singers"
 msgstr "Исполнители"
 
-#: catalog/songs/models.py:40 catalog/songs/models.py:79
+#: catalog/songs/models.py:40 catalog/songs/models.py:83
 msgid "Song"
 msgstr "Песня"
 
-#: catalog/songs/models.py:52
+#: catalog/songs/models.py:56
 msgid "Year"
 msgstr "Год"
 
-#: catalog/songs/models.py:64 catalog/songs/models.py:73
+#: catalog/songs/models.py:68 catalog/songs/models.py:77
 msgid "Album"
 msgstr "Альбом"
 
-#: catalog/songs/models.py:65
+#: catalog/songs/models.py:69
 msgid "Albums"
 msgstr "Альбомы"
 
-#: catalog/songs/models.py:83
+#: catalog/songs/models.py:87
 msgid "Position"
 msgstr "Позиция"
 
-#: catalog/songs/models.py:91
+#: catalog/songs/models.py:95
 msgid "Song in album"
 msgstr "Песня в альбоме"
 
-#: catalog/songs/models.py:92
+#: catalog/songs/models.py:96
 msgid "Songs in albums"
 msgstr "Песни в альбомах"
 
-#: catalog/songs/models.py:102
+#: catalog/songs/models.py:106
 msgid "in"
 msgstr "в"
 
-#: catalog/songs/utils.py:6
+#: catalog/songs/utils.py:5
 #, python-format
 msgid "Required. %(max_chars)s characters or fewer."
 msgstr "Обязательное поле. Не более %(max_chars)s символов."
@@ -83,7 +83,7 @@ msgstr "Обязательное поле. Не более %(max_chars)s сим�
 msgid "Value can not be less than %(min_value)s."
 msgstr "Значение не может быть меньше, чем %(min_value)s."
 
-#: catalog/songs/utils.py:16
+#: catalog/songs/utils.py:17
 #, python-format
 msgid "Value can not be more than %(max_value)s."
 msgstr "Значение не может быть больше, чем %(max_value)s."

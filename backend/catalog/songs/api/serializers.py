@@ -1,6 +1,7 @@
-from catalog.songs.models import Album, AlbumSong, Singer, Song
-from django.utils.translation import gettext_lazy as _
-from rest_framework import serializers
+from django.utils.translation import gettext_lazy as _  # type: ignore
+from rest_framework import serializers  # type: ignore
+
+from catalog.songs.models import Album, AlbumSong, Singer, Song  # isort: skip
 
 
 class SingerSerializer(serializers.ModelSerializer):
@@ -53,7 +54,7 @@ class AlbumSerializer(serializers.ModelSerializer):
     def add_songs(self, instance, songs):
         for song in songs:
             position = song.pop('position')
-            song = Song.objects.get_or_create(**song)[0]
+            song, _ = Song.objects.get_or_create(**song)
             instance.songs.add(
                 song, through_defaults={
                     'position': position
@@ -89,7 +90,7 @@ class AlbumSerializer(serializers.ModelSerializer):
                 singer=data.get('singer')
             ).exists():
                 errors['exists'] = _(
-                    'This singer alredy has an album with this name!'
+                    'This singer already has an album with this name!'
                 )
         if len(data.get('songs')) != 0:
             songs = list(map(lambda x: x.get('name'), data.get('songs')))

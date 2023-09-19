@@ -1,6 +1,6 @@
 from typing import OrderedDict, Union
 
-from catalog.songs.models import Album, Singer
+from catalog.songs.models import Album, Singer  # isort: skip
 
 class AlbumData(OrderedDict):
     name: str

@@ -1,6 +1,6 @@
-from django.contrib import admin
+from django.contrib import admin  # type: ignore
 
-from .models import Album, AlbumSong, Singer, Song
+from catalog.songs.models import Album, AlbumSong, Singer, Song  # isort: skip
 
 
 @admin.register(Singer)

@@ -1,5 +1,5 @@
-from django.apps import AppConfig
-from django.utils.translation import gettext_lazy as _
+from django.apps import AppConfig  # type: ignore
+from django.utils.translation import gettext_lazy as _  # type: ignore
 
 
 class SongsApp(AppConfig):

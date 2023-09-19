@@ -96,7 +96,7 @@ LANGUAGE_CODE = 'ru'
 
 LANGUAGES = [
     ('en', _('English')),
-    ('ru', _('Russian')), 
+    ('ru', _('Russian')),
 ]
 
 TIME_ZONE = 'Europe/Moscow'

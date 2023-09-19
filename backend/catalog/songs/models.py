@@ -1,10 +1,14 @@
-from django.db import models
-from django.utils.translation import gettext_lazy as _
+from django.db import models  # type: ignore
+from django.utils.translation import gettext_lazy as _  # type: ignore
 
-from .constants import (MAX_LENGHT_NAME, MAX_SONG_IN_ALBUM_POSITION, MAX_YEAR,
-                        MIN_SONG_IN_ALBUM_POSITION, MIN_YEAR)
-from .fields import ValidatePositiveSmallIntegerField
-from .utils import get_help_text_required_max_chars
+from catalog.songs.constants import (MAX_LENGHT_NAME,  # isort: skip
+                                     MAX_SONG_IN_ALBUM_POSITION, MAX_YEAR,
+                                     MIN_SONG_IN_ALBUM_POSITION, MIN_YEAR
+                                     )
+from catalog.songs.fields import (  # isort: skip
+    ValidatePositiveSmallIntegerField
+)
+from catalog.songs.utils import get_help_text_required_max_chars  # isort: skip
 
 
 class BaseModel(models.Model):
@@ -23,7 +27,7 @@ class BaseModel(models.Model):
         abstract = True
         ordering = ('name', )
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.name
 
 
@@ -98,5 +102,5 @@ class AlbumSong(models.Model):
             ),
         )
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'{self.song} ' + _('in') + f' {self.album}'

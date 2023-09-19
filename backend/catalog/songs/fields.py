@@ -1,13 +1,16 @@
-from django.core.validators import MaxValueValidator, MinValueValidator
-from django.db import models
+from django.core.validators import (MaxValueValidator,  # type: ignore
+                                    MinValueValidator)
+from django.db import models  # type: ignore
 
-from .utils import (get_error_message_max_validator,
-                    get_error_message_min_validator)
+from catalog.songs.utils import (  # isort: skip
+    get_error_message_max_validator,
+    get_error_message_min_validator
+)
 
 
 class ValidatePositiveSmallIntegerField(models.PositiveSmallIntegerField):
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         min = kwargs.pop('min_value', 0)
         max = kwargs.pop('max_value', 32767)
         kwargs['validators'] = (
