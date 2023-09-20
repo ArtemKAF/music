@@ -5,6 +5,7 @@ volumes:
   db_data:
   static_data:
 
+
 services:
 
   backend:
@@ -18,7 +19,15 @@ services:
     volumes:
       - static_data:/app/backend_static/
       - db_data:/app/db/
-    command: sh -c "python manage.py migrate && python manage.py collectstatic -c --noinput && cp -r /app/staticfiles/. /app/backend_static/ && django-admin compilemessages && gunicorn --bind 0.0.0.0:8000 config.wsgi"
+    command:
+      - /bin/sh
+      - -c
+      - |
+        python manage.py migrate
+        python manage.py collectstatic -c --noinput
+        cp -r /app/staticfiles/. /app/backend_static/
+        django-admin compilemessages
+        gunicorn --bind 0.0.0.0:8000 config.wsgi
     restart: unless-stopped
 
   gateway:
